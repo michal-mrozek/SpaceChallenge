@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Rocket implements SpaceShip{
@@ -16,7 +17,9 @@ protected List<Item> carriedItems;
         this.maxWeight = maxWeight;
         this.chanceOfLaunchExplosion = chanceOfLaunchExplosion;
         this.chanceOfLandingCrash = chanceOfLandingCrash;
+        carriedItems = new ArrayList<>();
         cargoLimit = maxWeight - rocketWeight;
+        cargoCarried = 0;
     }
 
     @Override
